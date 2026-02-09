@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tellix UI Skeleton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <div class="logo">T</div>
+      <div class="server-circle" title="Gaming"></div>
+      <div class="server-circle" title="Family"></div>
+      <div class="server-circle" title="Friends"></div>
+      <div class="server-circle add-server" title="Add Server">+</div>
+    </div>
+
+    <!-- Server List -->
+    <div class="server-list">
+      <div class="server-title">Servers</div>
+      <div class="server-item" onclick="alert('Clicked Gaming')">Gaming</div>
+      <div class="server-item" onclick="alert('Clicked Family')">Family</div>
+      <div class="server-item" onclick="alert('Clicked Friends')">Friends</div>
+      <button class="create-server-btn" onclick="alert('Create Server Clicked')">+ Create Server</button>
+    </div>
+
+    <!-- Channel List -->
+    <div class="channel-list">
+      <div class="channel-header">
+        <span class="channel-title">Channels</span>
+        <button onclick="alert('Add Channel')">+</button>
+      </div>
+      <div class="channel-item" onclick="alert('Clicked #general')">#general</div>
+      <div class="channel-item" onclick="alert('Clicked #chat')">#chat</div>
+      <div class="channel-item" onclick="alert('Clicked #rules')">#rules</div>
+      <div class="voice-header">
+        <span>Voice Channels</span>
+        <button onclick="alert('Add Voice Channel')">+</button>
+      </div>
+      <div class="channel-item" onclick="alert('Joined Voice: Lobby')">🎤 Lobby</div>
+      <div class="channel-item" onclick="alert('Joined Voice: Team')">🎤 Team</div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+      <div class="chat-header">
+        <span class="server-name">Gaming Server</span>
+        <div class="ai-mode">
+          AI Moderation: 
+          <select onchange="alert('AI Mode Changed: '+this.value)">
+            <option>Soft</option>
+            <option selected>Mid</option>
+            <option>Extreme</option>
+          </select>
+          <button onclick="alert('Security Wave Activated')">Security Wave</button>
+        </div>
+      </div>
+
+      <div class="chat-window">
+        <div class="message"><b>Alice:</b> Hello everyone!</div>
+        <div class="message"><b>Bob:</b> Hey Alice!</div>
+        <div class="message system">System: Welcome to Tellix!</div>
+        <div class="message mod"><b>Moderator:</b> Remember to follow the rules!</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <!-- Users Panel -->
+    <div class="users-panel">
+      <div class="users-header">Online Members</div>
+      <div class="user-item"><span class="role admin">Admin</span> Alice</div>
+      <div class="user-item"><span class="role mod">Mod</span> Bob</div>
+      <div class="user-item"><span class="role member">Member</span> Charlie</div>
+      <div class="user-item"><span class="role member">Member</span> Dave</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
